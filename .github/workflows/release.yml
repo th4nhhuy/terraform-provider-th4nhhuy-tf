@@ -26,13 +26,13 @@ jobs:
       - name: Install GoReleaser
         uses: goreleaser/goreleaser-action@v5
         with:
-          version: v1.26.2 
+          version: v2.7.0
           install-only: true
       - name: Check GoReleaser version
         run: goreleaser --version
 
-      # - name: Run GoReleaser
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
-      #     GPG_FINGERPRINT: ${{ secrets.GPG_FINGERPRINT }} # nếu bạn dùng ký số
-      #   run: goreleaser release --clean
+      - name: Run GoReleaser
+        env:
+          GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
+          GPG_FINGERPRINT: ${{ secrets.GPG_FINGERPRINT }} # nếu bạn dùng ký số
+        run: goreleaser release --clean

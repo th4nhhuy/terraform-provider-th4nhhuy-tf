@@ -4,7 +4,6 @@ import (
 	"context"
 	"flag"
 	"log"
-
 	"terraform-provider-vnpaycloud/vnpaycloud/provider"
 
 	"github.com/hashicorp/terraform-plugin-framework/providerserver"

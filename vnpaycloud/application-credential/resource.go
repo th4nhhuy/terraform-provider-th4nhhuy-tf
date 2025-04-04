@@ -40,13 +40,14 @@ func ResourceIdentityApplicationCredentialV3() *schema.Resource {
 			"description": {
 				Type:     schema.TypeString,
 				Optional: true,
-				ForceNew: false,
+				ForceNew: true,
 			},
 
 			"unrestricted": {
 				Type:     schema.TypeBool,
 				Optional: true,
-				ForceNew: false,
+				Default:  false,
+				ForceNew: true,
 			},
 			"secret": {
 				Type:      schema.TypeString,

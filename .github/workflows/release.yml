@@ -35,4 +35,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
           GPG_FINGERPRINT: ${{ secrets.GPG_FINGERPRINT }} # nếu bạn dùng ký số
-        run: goreleaser release --clean
+        run: goreleaser release --clean --config .goreleaser.yml
